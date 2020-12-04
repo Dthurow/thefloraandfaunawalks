@@ -8,13 +8,10 @@ imageTemplate=$(cat ./imageFormat.html)
 linkTemplate=$(cat ./indexLinkFormat.html)
 
 #the folder name to publish the site to
-websiteFolder="docs"
+websiteFolder="website"
 
 index=$indexTemplate
-#delete old copy of the website
-if [ -d "$websiteFolder" ]; then
-    rm -r $websiteFolder
-fi
+
 
 #make folder structure again for website
 mkdir $websiteFolder

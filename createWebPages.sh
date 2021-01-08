@@ -14,8 +14,10 @@ index=$indexTemplate
 
 
 #make folder structure again for website
-mkdir $websiteFolder
-mkdir $websiteFolder/images
+if [ ! -d $websiteFolder ]; then
+    mkdir $websiteFolder
+    mkdir $websiteFolder/images
+fi
 
 #copy all css
 for i in $(ls *.css)
